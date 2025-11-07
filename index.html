@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souq Dz - متجر المنتجات الطبيعية الجزائرية</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-amber-50 font-cairo">
+    <!-- Navigation -->
+    <nav class="navbar glass-effect fixed w-full top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="logo-container">
+                    <i class="fas fa-leaf text-3xl text-green-600 mr-3"></i>
+                    <span class="text-2xl font-bold text-gray-800">Souq Dz</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link active">الرئيسية</a>
+                <a href="shop.html" class="nav-link">المتجر</a>
+                <a href="articles.html" class="nav-link">المقالات</a>
+                <a href="courses.html" class="nav-link">الدورات</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="cart-btn relative">
+                    <i class="fas fa-shopping-cart text-xl text-gray-700"></i>
+                    <span class="cart-count bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs absolute -top-2 -left-2">3</span>
+                </button>
+                <button class="mobile-menu-btn md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu hidden md:hidden mt-4 pb-4">
+            <a href="index.html" class="block py-2 text-gray-700 hover:text-green-600">الرئيسية</a>
+            <a href="shop.html" class="block py-2 text-gray-700 hover:text-green-600">المتجر</a>
+            <a href="articles.html" class="block py-2 text-gray-700 hover:text-green-600">المقالات</a>
+            <a href="courses.html" class="block py-2 text-gray-700 hover:text-green-600">الدورات</a>
+            <a href="contact.html" class="block py-2 text-gray-700 hover:text-green-600">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="hero-content">
+                    <h1 class="text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                        منتجات طبيعية <span class="text-green-600">أصيلة</span>
+                        <br>من أرض الجزائر
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        اكتشف كنوز الطبيعة الجزائرية من زيوت أركان نقية، عسل جبلي، أعشاب طبية، ومنتجات تجميل طبيعية. كل منتج مضمون بشهادة أصالة.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="shop.html" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-shopping-bag mr-2"></i>
+                            تسوق الآن
+                        </a>
+                        <a href="courses.html" class="btn-secondary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            دورات تعليمية
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container relative">
+                        <img src="logo.jpg" alt="منتجات طبيعية" class="rounded-3xl shadow-2xl w-full h-auto object-cover">
+                        <div class="floating-elements">
+                            <div class="floating-badge bg-white rounded-full px-4 py-2 shadow-lg absolute top-4 right-4">
+                                <span class="text-green-600 font-semibold">100% طبيعي</span>
+                            </div>
+                            <div class="floating-badge bg-white rounded-full px-4 py-2 shadow-lg absolute bottom-4 left-4">
+                                <span class="text-amber-600 font-semibold">شهادة أصالة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">فئات المنتجات</h2>
+                <p class="text-xl text-gray-600">اكتشف مجموعتنا الواسعة من المنتجات الطبيعية</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="category-card group cursor-pointer" onclick="window.location.href='shop.html?category=oils'">
+                    <div class="card-inner bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <div class="icon-container w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors duration-300">
+                            <i class="fas fa-seedling text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">الزيوت الطبيعية</h3>
+                        <p class="text-gray-600 text-center text-sm leading-relaxed">زيوت أركان، لوز، نارجيل، وجوجوبا نقية 100%</p>
+                    </div>
+                </div>
+
+                <div class="category-card group cursor-pointer" onclick="window.location.href='shop.html?category=honey'">
+                    <div class="card-inner bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <div class="icon-container w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-200 transition-colors duration-300">
+                            <i class="fas fa-mortar-pestle text-3xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">العسل والأعشاب</h3>
+                        <p class="text-gray-600 text-center text-sm leading-relaxed">عسل جبلي، أعشاب طبية، وخلطات طبيعية</p>
+                    </div>
+                </div>
+
+                <div class="category-card group cursor-pointer" onclick="window.location.href='shop.html?category=cosmetics'">
+                    <div class="card-inner bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <div class="icon-container w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-pink-200 transition-colors duration-300">
+                            <i class="fas fa-spa text-3xl text-pink-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">منتجات التجميل</h3>
+                        <p class="text-gray-600 text-center text-sm leading-relaxed">صابون طبيعي، كريمات، ومنتجات العناية بالبشرة</p>
+                    </div>
+                </div>
+
+                <div class="category-card group cursor-pointer" onclick="window.location.href='shop.html?category=food'">
+                    <div class="card-inner bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <div class="icon-container w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-200 transition-colors duration-300">
+                            <i class="fas fa-apple-alt text-3xl text-orange-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">المواد الغذائية</h3>
+                        <p class="text-gray-600 text-center text-sm leading-relaxed">توابل، زيتون، تمر، ومنتجات غذائية طبيعية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products py-16 bg-gradient-to-r from-green-50 to-amber-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">منتجات مميزة</h2>
+                <p class="text-xl text-gray-600">أفضل منتجاتنا الطبيعية المختارة بعناية</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=300&fit=crop" alt="زيت أركان" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            الأكثر مبيعاً
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">زيت أركان نقي 100%</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">زيت أركان طبيعي مستخلص من أشجار أركان الجزائرية، غني بفيتامين E ومضادات الأكسدة</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-green-600">2,500 دج</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="text-sm text-gray-600 mr-1">(4.8)</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300" onclick="addToCart('زيت أركان')">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            أضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=400&h=300&fit=crop" alt="عسل جبلي" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            جديد
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">عسل جبلي طبيعي</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">عسل جبلي نقي من أعالي جبال الجزائر، غير مكرر وغني بالمعادن والفيتامينات</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-green-600">1,800 دج</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="text-sm text-gray-600 mr-1">(4.9)</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300" onclick="addToCart('عسل جبلي')">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            أضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=300&fit=crop" alt="صابون طبيعي" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">صابون الغار الطبيعي</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">صابون مصنوع يدوياً من زيت الغار وزيت الزيتون، مناسب لجميع أنواع البشرة</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-green-600">450 دج</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="text-sm text-gray-600 mr-1">(4.7)</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300" onclick="addToCart('صابون الغار')">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            أضف إلى السلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="shop.html" class="btn-primary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-store mr-2"></i>
+                    عرض جميع المنتجات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item">
+                    <div class="stat-icon w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2" data-count="1500">0</h3>
+                    <p class="text-gray-600">عميل راضي</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2" data-count="50">0</h3>
+                    <p class="text-gray-600">منتج طبيعي</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-2xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2" data-count="15">0</h3>
+                    <p class="text-gray-600">جائزة جودة</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2" data-count="25">0</h3>
+                    <p class="text-gray-600">شريك مورد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gradient-to-r from-green-800 to-green-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="footer-section">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-leaf text-3xl text-green-400 mr-3"></i>
+                        <span class="text-2xl font-bold">Souq Dz</span>
+                    </div>
+                    <p class="text-green-100 leading-relaxed mb-6">
+                        متجرك الموثوق للمنتجات الطبيعية الجزائرية الأصيلة. نضمن لك الجودة والأصالة في كل منتج.
+                    </p>
+                    <div class="social-links flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-green-100 hover:text-white transition-colors duration-300">الرئيسية</a></li>
+                        <li><a href="shop.html" class="text-green-100 hover:text-white transition-colors duration-300">المتجر</a></li>
+                        <li><a href="articles.html" class="text-green-100 hover:text-white transition-colors duration-300">المقالات</a></li>
+                        <li><a href="courses.html" class="text-green-100 hover:text-white transition-colors duration-300">الدورات</a></li>
+                        <li><a href="contact.html" class="text-green-100 hover:text-white transition-colors duration-300">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">الفئات</h3>
+                    <ul class="space-y-3">
+                        <li><a href="shop.html?category=oils" class="text-green-100 hover:text-white transition-colors duration-300">الزيوت الطبيعية</a></li>
+                        <li><a href="shop.html?category=honey" class="text-green-100 hover:text-white transition-colors duration-300">العسل والأعشاب</a></li>
+                        <li><a href="shop.html?category=cosmetics" class="text-green-100 hover:text-white transition-colors duration-300">منتجات التجميل</a></li>
+                        <li><a href="shop.html?category=food" class="text-green-100 hover:text-white transition-colors duration-300">المواد الغذائية</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">معلومات التواصل</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-400 mr-3"></i>
+                            <span class="text-green-100">+213 0000000000</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-green-400 mr-3"></i>
+                            <span class="text-green-100">info@souqdz.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-green-400 mr-3"></i>
+                            <span class="text-green-100">الجزائر،خنشلة </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-green-700 mt-12 pt-8 text-center">
+                <p class="text-green-100">
+                    © 2025 Souq Dz - جميع الحقوق محفوظة | متجر المنتجات الطبيعية الجزائرية
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - Souq Dz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-amber-50 font-cairo">
+    <!-- Navigation -->
+    <nav class="navbar glass-effect fixed w-full top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="logo-container">
+                    <i class="fas fa-leaf text-3xl text-green-600 mr-3"></i>
+                    <span class="text-2xl font-bold text-gray-800">Souq Dz</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="shop.html" class="nav-link">المتجر</a>
+                <a href="articles.html" class="nav-link">المقالات</a>
+                <a href="courses.html" class="nav-link">الدورات</a>
+                <a href="contact.html" class="nav-link active">اتصل بنا</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="cart-btn relative">
+                    <i class="fas fa-shopping-cart text-xl text-gray-700"></i>
+                    <span class="cart-count bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs absolute -top-2 -left-2">3</span>
+                </button>
+                <button class="mobile-menu-btn md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu hidden md:hidden mt-4 pb-4">
+            <a href="index.html" class="block py-2 text-gray-700 hover:text-green-600">الرئيسية</a>
+            <a href="shop.html" class="block py-2 text-gray-700 hover:text-green-600">المتجر</a>
+            <a href="articles.html" class="block py-2 text-gray-700 hover:text-green-600">المقالات</a>
+            <a href="courses.html" class="block py-2 text-gray-700 hover:text-green-600">الدورات</a>
+            <a href="contact.html" class="block py-2 text-gray-700 hover:text-green-600">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header pt-24 pb-12 bg-gradient-to-r from-green-100 to-amber-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">اتصل بنا</h1>
+                <p class="text-xl text-gray-600">نحن هنا للإجابة على جميع استفساراتك</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="info-card bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="icon-container w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">الهاتف</h3>
+                    <p class="text-gray-600 mb-2">+213 555 123 456</p>
+                    <p class="text-gray-600">+213 555 123 457</p>
+                    <p class="text-sm text-gray-500 mt-3">متاح 24/7 للطوارئ</p>
+                </div>
+
+                <div class="info-card bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="icon-container w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">البريد الإلكتروني</h3>
+                    <p class="text-gray-600 mb-2">info@souqdz.com</p>
+                    <p class="text-gray-600">support@souqdz.com</p>
+                    <p class="text-sm text-gray-500 mt-3">نرد خلال 24 ساعة</p>
+                </div>
+
+                <div class="info-card bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="icon-container w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">العنوان</h3>
+                    <p class="text-gray-600 mb-2">الجزائر خنشلة</p>
+                    <p class="text-gray-600">حي بوزيان</p>
+                    <p class="text-sm text-gray-500 mt-3">مفتوح من 9 ص إلى 6 م</p>
+                </div>
+
+                <div class="info-card bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="icon-container w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-whatsapp text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">واتساب</h3>
+                    <p class="text-gray-600 mb-2">+213 555 123 458</p>
+                    <p class="text-gray-600">+213 555 123 459</p>
+                    <p class="text-sm text-gray-500 mt-3">دردشة فورية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Map -->
+    <section class="contact-section py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">أرسل لنا رسالة</h2>
+                        <form id="contactForm" onsubmit="submitContactForm(event)">
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="firstName" class="block text-gray-700 font-semibold mb-2">الاسم الأول *</label>
+                                    <input type="text" id="firstName" name="firstName" required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-gray-700 font-semibold mb-2">الاسم الأخير *</label>
+                                    <input type="text" id="lastName" name="lastName" required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-semibold mb-2">البريد الإلكتروني *</label>
+                                    <input type="email" id="email" name="email" required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-semibold mb-2">رقم الهاتف</label>
+                                    <input type="tel" id="phone" name="phone"
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-semibold mb-2">الموضوع *</label>
+                                <select id="subject" name="subject" required
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                    <option value="">اختر الموضوع</option>
+                                    <option value="product">استفسار عن منتج</option>
+                                    <option value="order">متابعة طلب</option>
+                                    <option value="course">استفسار عن دورة</option>
+                                    <option value="partnership">شراكة تجارية</option>
+                                    <option value="complaint">شكوى</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-semibold mb-2">الرسالة *</label>
+                                <textarea id="message" name="message" rows="5" required
+                                          placeholder="اكتب رسالتك هنا..."
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"></textarea>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="newsletter" class="mr-3 w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500">
+                                    <span class="text-gray-700">أرغب في الاشتراك في النشرة البريدية</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300 text-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                إرسال الرسالة
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map and Business Hours -->
+                <div class="map-section">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">موقعنا على الخريطة</h3>
+                        <div class="map-container bg-gray-200 rounded-2xl h-64 flex items-center justify-center mb-6">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-6xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-600">الخريطة التفاعلية</p>
+                                <p class="text-sm text-gray-500">الجزائر خنشلة </p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300" 
+                                onclick="openGoogleMaps()">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            فتح في خرائط جوجل
+                        </button>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-white rounded-3xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">أوقات العمل</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="font-semibold text-gray-800">الأحد - الخميس</span>
+                                <span class="text-gray-600">9:00 ص - 6:00 م</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="font-semibold text-gray-800">الجمعة</span>
+                                <span class="text-gray-600">9:00 ص - 4:00 م</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="font-semibold text-gray-800">السبت</span>
+                                <span class="text-gray-600">10:00 ص - 3:00 م</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3">
+                                <span class="font-semibold text-green-600">الطوارئ</span>
+                                <span class="text-green-600">24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-16 bg-gradient-to-r from-green-100 to-amber-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">الأسئلة الشائعة</h2>
+                <p class="text-xl text-gray-600">إجابات على الأسئلة الأكثر شيوعاً</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300" 
+                            onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">ما هي مدة توصيل الطلبات؟</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6 hidden">
+                        <p class="text-gray-600 leading-relaxed">
+                            مدة التوصيل تختلف حسب المنطقة. في الجزائر خنشلة والضواحي: 24-48 ساعة. 
+                            في المدن الأخرى: 3-5 أيام عمل. نوفر خدمة التوصيل السريع للطلبات المستعجلة.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300" 
+                            onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">هل المنتجات لديكم أصلية 100%؟</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6 hidden">
+                        <p class="text-gray-600 leading-relaxed">
+                            نعم، جميع منتجاتنا أصلية 100% ومصدرها مباشر من المنتجين الموثوقين. 
+                            كل منتج يأتي مع شهادة أصالة وتحليل مخبري عند الطلب.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300" 
+                            onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">هل يمكنني استرجاع المنتج؟</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6 hidden">
+                        <p class="text-gray-600 leading-relaxed">
+                            نعم، نوفر خدمة الاسترجاع خلال 14 يوم من تاريخ الاستلام، بشرط أن يكون المنتج في حالته الأصلية 
+                            وغير مستخدم. تكاليف الشحن على عاتق العميل في حالة الاسترجاع.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300" 
+                            onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">هل تقدمون دورات تدريبية؟</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6 hidden">
+                        <p class="text-gray-600 leading-relaxed">
+                            نعم، نقدم دورات تدريبية متخصصة في صناعة المنتجات الطبيعية، من صناعة الصابون والكريمات 
+                            إلى استخراج الزيوت. الدورات تأتي مع شهادات معتمدة.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300" 
+                            onclick="toggleFAQ(this)">
+                        <span class="text-lg font-semibold text-gray-800">هل يمكنني الشراء بالجملة؟</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-8 pb-6 hidden">
+                        <p class="text-gray-600 leading-relaxed">
+                            بالطبع! نوفر خدمة البيع بالجملة للمتاجر والمشاريع التجارية. تواصل معنا عبر الهاتف أو البريد الإلكتروني 
+                            للحصول على عرض أسعار خاص.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-media py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">تابعنا على وسائل التواصل الاجتماعي</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="social-link w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-link w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform duration-300">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gradient-to-r from-green-800 to-green-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="footer-section">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-leaf text-3xl text-green-400 mr-3"></i>
+                        <span class="text-2xl font-bold">Souq Dz</span>
+                    </div>
+                    <p class="text-green-100 leading-relaxed mb-6">
+                        متجرك الموثوق للمنتجات الطبيعية الجزائرية الأصيلة. نضمن لك الجودة والأصالة في كل منتج.
+                    </p>
+                    <div class="social-links flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-green-100 hover:text-white transition-colors duration-300">الرئيسية</a></li>
+                        <li><a href="shop.html" class="text-green-100 hover:text-white transition-colors duration-300">المتجر</a></li>
+                        <li><a href="articles.html" class="text-green-100 hover:text-white transition-colors duration-300">المقالات</a></li>
+                        <li><a href="courses.html" class="text-green-100 hover:text-white transition-colors duration-300">الدورات</a></li>
+                        <li><a href="contact.html" class="text-green-100 hover:text-white transition-colors duration-300">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">خدمة العملاء</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-green-100 hover:text-white transition-colors duration-300">الأسئلة الشائعة</a></li>
+                        <li><a href="#" class="text-green-100 hover:text-white transition-colors duration-300">سياسة الإرجاع</a></li>
+                        <li><a href="#" class="text-green-100 hover:text-white transition-colors duration-300">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-green-100 hover:text-white transition-colors duration-300">الشروط والأحكام</a></li>
+                        <li><a href="#" class="text-green-100 hover:text-white transition-colors duration-300">تتبع الطلب</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">معلومات التواصل</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-400 mr-3"></i>
+                            <span class="text-green-100">+213 555 123 456</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-green-400 mr-3"></i>
+                            <span class="text-green-100">info@souqdz.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-green-400 mr-3"></i>
+                            <span class="text-green-100">الجزائر،خنشلة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-green-700 mt-12 pt-8 text-center">
+                <p class="text-green-100">
+                    © 2025 Souq Dz - جميع الحقوق محفوظة | متجر المنتجات الطبيعية الجزائرية
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Open Google Maps
+        function openGoogleMaps() {
+            const lat = 36.7783;
+            const lng = 3.0588;
+            const url = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+            window.open(url, '_blank');
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scroll to anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add animation to info cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease both';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.info-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المقالات - Souq Dz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-amber-50 font-cairo">
+    <!-- Navigation -->
+    <nav class="navbar glass-effect fixed w-full top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="logo-container">
+                    <i class="fas fa-leaf text-3xl text-green-600 mr-3"></i>
+                    <span class="text-2xl font-bold text-gray-800">Souq Dz</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="shop.html" class="nav-link">المتجر</a>
+                <a href="articles.html" class="nav-link active">المقالات</a>
+                <a href="courses.html" class="nav-link">الدورات</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button class="cart-btn relative">
+                    <i class="fas fa-shopping-cart text-xl text-gray-700"></i>
+                    <span class="cart-count bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs absolute -top-2 -left-2">3</span>
+                </button>
+                <button class="mobile-menu-btn md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu hidden md:hidden mt-4 pb-4">
+            <a href="index.html" class="block py-2 text-gray-700 hover:text-green-600">الرئيسية</a>
+            <a href="shop.html" class="block py-2 text-gray-700 hover:text-green-600">المتجر</a>
+            <a href="articles.html" class="block py-2 text-gray-700 hover:text-green-600">المقالات</a>
+            <a href="courses.html" class="block py-2 text-gray-700 hover:text-green-600">الدورات</a>
+            <a href="contact.html" class="block py-2 text-gray-700 hover:text-green-600">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header pt-24 pb-12 bg-gradient-to-r from-green-100 to-amber-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">المقالات والنصائح</h1>
+                <p class="text-xl text-gray-600">اكتشف فوائد المنتجات الطبيعية وطرق استخدامها</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <div class="relative h-96 lg:h-auto">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=600&fit=crop" 
+                             alt="فوائد زيت الأركان" class="w-full h-full object-cover">
+                        <div class="absolute top-6 right-6 bg-green-500 text-white px-4 py-2 rounded-full font-semibold">
+                            مقال مميز
+                        </div>
+                    </div>
+                    <div class="p-12 flex flex-col justify-center">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">الزيوت الطبيعية</span>
+                            <span class="text-gray-500 mr-4"><i class="far fa-calendar-alt mr-2"></i>15 نوفمبر 2025</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6 leading-tight">
+                            فوائد زيت الأركان المذهلة للبشرة والشعر
+                        </h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                            زيت الأركان يُعرف بأنه "الذهب السائل" للجزائر، ويحتوي على تركيبة فريدة من مضادات الأكسدة والأحماض الدهنية الأساسية. 
+                            في هذا المقال، نستعرض أهم فوائده وطرق استخدامه للحصول على أفضل النتائج.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop" 
+                                     alt="الكاتب" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-semibold text-gray-800">د. فاطمة الزهراء</p>
+                                    <p class="text-sm text-gray-600">خبيرة تجميل طبيعي</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                                قراءة المقال
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-section py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">أحدث المقالات</h2>
+                <p class="text-xl text-gray-600">نصائح وإرشادات للعناية الطبيعية</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?w=400&h=250&fit=crop" 
+                             alt="عسل جبلي" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            العسل والأعشاب
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>12 نوفمبر 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>5 دقائق قراءة</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 leading-tight">
+                            العسل الجبلي: كنوز الطبيعة العلاجية
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            تعرف على الفوائد الصحية الرائعة للعسل الجبلي الجزائري، وكيفية استخدامه كعلاج طبيعي لمختلف الأمراض.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" 
+                                     alt="الكاتبة" class="w-10 h-10 rounded-full mr-3">
+                                <span class="text-sm font-semibold text-gray-800">سارة أحمد</span>
+                            </div>
+                            <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition-colors">
+                                قراءة المزيد <i class="fas fa-arrow-left mr-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=250&fit=crop" 
+                             alt="صابون طبيعي" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            منتجات التجميل
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>10 نوفمبر 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>4 دقائق قراءة</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 leading-tight">
+                            الصابون الطبيعي: وصفات منزلية سهلة
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            تعلم كيفية صنع الصابون الطبيعي في المنزل باستخدام زيت الغار والزيوت العطرية للحصول على بشرة ناعمة وصحية.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop" 
+                                     alt="الكاتبة" class="w-10 h-10 rounded-full mr-3">
+                                <span class="text-sm font-semibold text-gray-800">أمينة بنعلي</span>
+                            </div>
+                            <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition-colors">
+                                قراءة المزيد <i class="fas fa-arrow-left mr-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1620662736427-f8545198bdcd?w=400&h=250&fit=crop" 
+                             alt="أعشاب طبية" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            الأعشاب الطبية
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>8 نوفمبر 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>6 دقائق قراءة</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 leading-tight">
+                            دليل الأعشاب الجزائرية واستخداماتها
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            استكشف عالم الأعشاب الجزائرية الطبية، فوائدها، وطرق تحضيرها للاستخدامات العلاجية المختلفة.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" 
+                                     alt="الكاتب" class="w-10 h-10 rounded-full mr-3">
+                                <span class="text-sm font-semibold text-gray-800">د. مصطفى</span>
+                            </div>
+                            <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition-colors">
+                                قراءة المزيد <i class="fas fa-arrow-left mr-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1608571423842-75c4f65d9f89?w=400&h=250&fit=crop" 
+                             alt="زيت لوز" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            العناية بالبشرة
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>5 نوفمبر 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>7 دقائق قراءة</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 leading-tight">
+                            روتين العناية اليومي بالزيوت الطبيعية
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            دليلك الشامل لإنشاء روتين عناية بالبشرة باستخدام الزيوت الطبيعية الجزائرية للحصول على أفضل النتائج.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=40&h=40&fit=crop" 
+                                     alt="الكاتبة" class="w-10 h-10 rounded-full mr-3">
+                                <span class="text-sm font-semibold text-gray-800">ليلى بوزيد</span>
+                            </div>
+                            <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition-colors">
+                                قراءة المزيد <i class="fas fa-arrow-left mr-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1620599295446-5a7c0882a8a4?w=400&h=250&fit=crop" 
+                             alt="تمر" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            التغذية الصحية
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>3 نوفمبر 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>3 دقائق قراءة</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 leading-tight">
+                            فوائد التمر الجزائري للصحة
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            التمر الجزائري من أجود أنواع التمر في العالم، تعرف على فوائده الصحية وقيمته الغذائية العالية.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" 
+                                     alt="الكاتب" class="w-10 h-10 rounded-full mr-3">
+                                <span class="text-sm font-semibold text-gray-800">أحمد خالد</span>
+                            </div>
+                            <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition-colors">
+                                قراءة المزيد <i class="fas fa-arrow-left mr-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1594973782943-b7c6f90fa221?w=400&h=250&fit=crop" 
+                             alt="زيتون" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            منتجات موسمية
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span>1 نوفمبر 2025</span>
+                            <span class="mx-2">•</span>
+                            <span>4 دقائق قراءة</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 leading-tight">
+                            موسم الزيتون: دليل الاستخدام والفوائد
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            كل ما تحتاج معرفته عن موسم الزيتون، طرق الحفظ، الفوائد الصحية، وكيفية الاستفادة منه بأقصى قدر.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop" 
+                                     alt="الكاتب" class="w-10 h-10 rounded-full mr-3">
+                                <span class="text-sm font-semibold text-gray-800">محمد علي</span>
+                            </div>
+                            <a href="#" class="text-green-600 hover:text-green-700 font-semibold transition-colors">
+                                قراءة المزيد <i class="fas fa-arrow-left mr-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="btn-primary px-8 py-4 text-lg font-semibold rounded-full hover:shadow-lg transition-all duration-300" 
+                        onclick="loadMoreArticles()">
+                    <i class="fas fa-plus mr-2"></i>
+                    عرض المزيد من المقالات
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-16 bg-gradient-to-r from-green-100 to-amber-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="bg-white rounded-3xl p-12 shadow-xl">
+                <i class="fas fa-envelope text-6xl text-green-600 mb-6"></i>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">اشترك في نشرتنا البريدية</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    احصل على أحدث المقالات والنصائح الطبيعية مباشرة إلى بريدك الإلكتروني
+                </p>
+                <form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required
+                           class="flex-1 px-6 py-4 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                    <button type="submit" 
+                            class="btn-primary px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        اشتراك
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gradient-to-r from-green-800 to-green-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="footer-section">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-leaf text-3xl text-green-400 mr-3"></i>
+                        <span class="text-2xl font-bold">Souq Dz</span>
+                    </div>
+                    <p class="text-green-100 leading-relaxed mb-6">
+                        متجرك الموثوق للمنتجات الطبيعية الجزائرية الأصيلة. نضمن لك الجودة والأصالة في كل منتج.
+                    </p>
+                    <div class="social-links flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-green-100 hover:text-white transition-colors duration-300">الرئيسية</a></li>
+                        <li><a href="shop.html" class="text-green-100 hover:text-white transition-colors duration-300">المتجر</a></li>
+                        <li><a href="articles.html" class="text-green-100 hover:text-white transition-colors duration-300">المقالات</a></li>
+                        <li><a href="courses.html" class="text-green-100 hover:text-white transition-colors duration-300">الدورات</a></li>
+                        <li><a href="contact.html" class="text-green-100 hover:text-white transition-colors duration-300">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">الفئات</h3>
+                    <ul class="space-y-3">
+                        <li><a href="articles.html?category=beauty" class="text-green-100 hover:text-white transition-colors duration-300">العناية بالبشرة</a></li>
+                        <li><a href="articles.html?category=health" class="text-green-100 hover:text-white transition-colors duration-300">الصحة والعافية</a></li>
+                        <li><a href="articles.html?category=nutrition" class="text-green-100 hover:text-white transition-colors duration-300">التغذية الصحية</a></li>
+                        <li><a href="articles.html?category=herbs" class="text-green-100 hover:text-white transition-colors duration-300">الأعشاب الطبية</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-6">معلومات التواصل</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-400 mr-3"></i>
+                            <span class="text-green-100">+213 555 123 456</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-green-400 mr-3"></i>
+                            <span class="text-green-100">info@souqdz.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-green-400 mr-3"></i>
+                            <span class="text-green-100">الجزائر،خنشلة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-green-700 mt-12 pt-8 text-center">
+                <p class="text-green-100">
+                    © 2025 Souq Dz - جميع الحقوق محفوظة | متجر المنتجات الطبيعية الجزائرية
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function loadMoreArticles() {
+            showNotification('جاري تحميل المزيد من المقالات...', 'info');
+            // In a real app, this would load more articles from the server
+        }
+
+        // Filter articles by category
+        function filterArticles(category) {
+            const articles = document.querySelectorAll('.article-card');
+            
+            articles.forEach(article => {
+                const articleCategory = article.getAttribute('data-category');
+                
+                if (category === 'all' || articleCategory === category) {
+                    article.style.display = 'block';
+                    article.style.animation = 'fadeInUp 0.5s ease';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            // Update active filter button
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+        }
+
+        // Search articles
+        function searchArticles(query) {
+            const articles = document.querySelectorAll('.article-card');
+            const searchTerm = query.toLowerCase();
+            
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const description = article.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    article.style.display = 'block';
+                    article.style.animation = 'fadeInUp 0.5s ease';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add article categories to cards
+            const articles = document.querySelectorAll('.article-card');
+            const categories = ['beauty', 'health', 'herbs', 'beauty', 'nutrition', 'health'];
+            
+            articles.forEach((article, index) => {
+                article.setAttribute('data-category', categories[index]);
+            });
+        });
+    </script>
+</body>
+</html>
